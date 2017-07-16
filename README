@@ -10,3 +10,15 @@ change target arduino version in CMakeLists.txt
 cmake ..
 make
 make upload
+
+
+## Command format
+
+```
+1-byte  addr length $A
+1-byte  command length $C
+1-byte  timeout
+$A-byte address
+$C-byte command
+1-byte  checksum (sum of all bytes up to checksum)
+1-byte checksum (sum of all bytes, twice)
